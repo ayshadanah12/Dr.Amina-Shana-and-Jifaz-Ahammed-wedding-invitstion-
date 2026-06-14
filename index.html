@@ -266,118 +266,6 @@ body{font-family:'Cinzel',serif;background:var(--cream);color:var(--sea-deep);ov
 .fam-name{font-family:'Cinzel Decorative',serif;font-size:20px;font-weight:400;color:#071e2e;letter-spacing:0.03em;}
 .fam-div{width:0.5px;background:var(--sea-pale);align-self:stretch;margin-top:56px;}
 
-/* ── RSVP ── */
-.rsvp-section{
-  position:relative;overflow:hidden;
-  background:linear-gradient(160deg,var(--sea-deep) 0%,#0d4f6e 60%,#0a3d5c 100%);
-  padding:0 0 80px;
-}
-/* top wave into rsvp */
-.rsvp-wave-top{line-height:0;overflow:hidden;}
-.rsvp-wave-top svg{display:block;width:100%;}
-
-.rsvp-inner{position:relative;z-index:2;max-width:580px;margin:0 auto;padding:0 24px;}
-/* bubbles bg */
-.bubble{
-  position:absolute;border-radius:50%;
-  border:1px solid rgba(126,205,232,0.2);
-  animation:bubbleRise linear infinite;
-  pointer-events:none;
-}
-@keyframes bubbleRise{
-  0%{transform:translateY(0);opacity:0.5;}
-  100%{transform:translateY(-600px);opacity:0;}
-}
-
-.rsvp-badge{
-  display:inline-block;padding:7px 20px;
-  background:rgba(126,205,232,0.12);border:0.5px solid rgba(126,205,232,0.3);
-  border-radius:100px;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;
-  color:var(--sea-pale);margin-bottom:20px;
-}
-.rsvp-title{
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(44px,7vw,70px);font-weight:400;font-style:normal;
-  color:white;margin-bottom:12px;letter-spacing:0.02em;
-}
-.rsvp-sub{font-size:13px;color:var(--sea-pale);font-weight:300;line-height:1.75;margin-bottom:40px;letter-spacing:0.03em;}
-
-/* RSVP FORM CARD */
-.rsvp-card{
-  background:rgba(255,255,255,0.06);
-  border:0.5px solid rgba(126,205,232,0.2);
-  border-radius:24px;padding:40px 36px;
-  backdrop-filter:blur(8px);
-}
-@media(max-width:500px){.rsvp-card{padding:28px 20px;}}
-
-.rsvp-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-@media(max-width:500px){.rsvp-form-grid{grid-template-columns:1fr;}}
-.form-full{grid-column:1/-1;}
-
-.rsvp-label{
-  display:block;font-size:10px;letter-spacing:0.28em;text-transform:uppercase;
-  color:var(--sea-pale);font-weight:300;margin-bottom:8px;
-}
-.rsvp-input,.rsvp-select{
-  width:100%;padding:13px 16px;
-  background:rgba(255,255,255,0.08);
-  border:0.5px solid rgba(126,205,232,0.25);
-  border-radius:12px;color:white;
-  font-family:'Cinzel',serif;font-size:16px;font-weight:400;
-  outline:none;transition:border-color 0.2s,background 0.2s;
-  appearance:none;-webkit-appearance:none;
-}
-.rsvp-input::placeholder{color:rgba(196,234,245,0.4);}
-.rsvp-input:focus,.rsvp-select:focus{
-  border-color:var(--sea-light);background:rgba(255,255,255,0.12);
-}
-.rsvp-select option{background:#0a3d5c;color:white;}
-
-/* attending toggle */
-.attend-row{display:flex;gap:12px;}
-.attend-btn{
-  flex:1;padding:13px 10px;border-radius:12px;cursor:pointer;
-  background:rgba(255,255,255,0.06);border:0.5px solid rgba(126,205,232,0.2);
-  color:var(--sea-pale);font-size:15px;font-family:'Cinzel',serif;font-weight:400;
-  text-align:center;transition:all 0.2s;letter-spacing:0.05em;
-}
-.attend-btn:hover{background:rgba(255,255,255,0.12);}
-.attend-btn.active-yes{background:rgba(126,205,232,0.2);border-color:var(--sea-light);color:white;}
-.attend-btn.active-no{background:rgba(200,100,80,0.2);border-color:rgba(240,160,140,0.5);color:#f9c4b8;}
-
-.rsvp-submit{
-  width:100%;margin-top:8px;padding:16px;
-  background:linear-gradient(90deg,var(--sand-dark),var(--sand-mid));
-  color:var(--sea-deep);font-family:'Cinzel Decorative',serif;
-  font-size:12px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;
-  border:none;border-radius:100px;cursor:pointer;
-  transition:opacity 0.2s,transform 0.2s;
-}
-.rsvp-submit:hover{opacity:0.9;transform:translateY(-2px);}
-.rsvp-submit:active{transform:translateY(0);}
-
-.rsvp-or{
-  margin-top:28px;font-size:11px;letter-spacing:0.05em;
-  color:rgba(196,234,245,0.5);text-align:center;
-}
-.rsvp-or a{color:var(--sea-pale);text-decoration:none;font-weight:400;}
-.rsvp-or a:hover{color:white;}
-
-/* success */
-.rsvp-success{
-  display:none;text-align:center;padding:24px 0;
-}
-.rsvp-success .check-circle{
-  width:64px;height:64px;border-radius:50%;
-  background:rgba(126,205,232,0.15);border:1px solid var(--sea-light);
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 20px;
-}
-.rsvp-success .check-circle svg{width:28px;height:28px;stroke:var(--sea-light);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-.rsvp-success h3{font-family:'Cinzel Decorative',serif;font-size:32px;font-style:normal;color:white;margin-bottom:10px;letter-spacing:0.04em;}
-.rsvp-success p{font-size:13px;color:var(--sea-pale);font-weight:300;line-height:1.7;}
-
 /* ── FOOTER ── */
 footer{
   padding:48px 24px;text-align:center;
@@ -648,7 +536,7 @@ footer{
   <div class="family-grid reveal">
     <div class="family-side" style="text-align:center;">
       <h3>Bride's Family</h3>
-      <div class="fam-member"><span class="fam-role">Father of the Bride</span><span class="fam-name">Sadath Kayamarkandy</span></div>
+      <div class="fam-member"><span class="fam-role">Father of the Bride</span><span class="fam-name">Sadath Kayammarkandy</span></div>
       <div class="fam-member"><span class="fam-role">Mother of the Bride</span><span class="fam-name">Najath Yousuf</span></div>
     </div>
     <div class="fam-div"></div>
@@ -713,79 +601,6 @@ footer{
     <polygon points="50,5 61,35 95,35 68,57 79,91 50,70 21,91 32,57 5,35 39,35"/>
   </svg>
 
-  <div class="rsvp-inner" style="text-align:center;">
-    <span class="rsvp-badge">RSVP</span>
-    <h2 class="rsvp-title">Will you join us?</h2>
-    <p class="rsvp-sub">Your presence would mean the world to us.<br>Kindly fill in your details below to let us know.</p>
-
-    <div class="rsvp-card" id="rsvp-form-wrap">
-      <div class="rsvp-form-grid" id="rsvpForm">
-
-        <div class="form-full">
-          <label class="rsvp-label">Your Full Name</label>
-          <input class="rsvp-input" id="guestName" type="text" placeholder="Enter your name" autocomplete="off"/>
-        </div>
-
-        <div>
-          <label class="rsvp-label">Phone Number</label>
-          <input class="rsvp-input" id="guestPhone" type="tel" placeholder="+91 XXXXX XXXXX" autocomplete="off"/>
-        </div>
-
-        <div>
-          <label class="rsvp-label">Number of Guests</label>
-          <select class="rsvp-select" id="guestCount">
-            <option value="">Select</option>
-            <option value="1">1 – Just me</option>
-            <option value="2">2 – Plus one</option>
-            <option value="3">3 guests</option>
-            <option value="4">4 guests</option>
-            <option value="5+">5 or more</option>
-          </select>
-        </div>
-
-        <div class="form-full">
-          <label class="rsvp-label">Will you be attending?</label>
-          <div class="attend-row">
-            <div class="attend-btn" id="btnYes" onclick="selectAttend('yes')">✓ &nbsp;Joyfully attending</div>
-            <div class="attend-btn" id="btnNo" onclick="selectAttend('no')">✗ &nbsp;Unable to attend</div>
-          </div>
-        </div>
-
-        <div class="form-full" id="msgWrap">
-          <label class="rsvp-label">Message (optional)</label>
-          <input class="rsvp-input" id="guestMsg" type="text" placeholder="A warm wish for the couple…" autocomplete="off"/>
-        </div>
-
-        <div class="form-full">
-          <button class="rsvp-submit" onclick="submitRSVP()">Send RSVP &nbsp;→</button>
-        </div>
-
-      </div>
-      <!-- success state -->
-      <div class="rsvp-success" id="rsvpSuccess">
-        <div class="check-circle">
-          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <h3>Thank you!</h3>
-        <p id="successMsg">We've received your RSVP and can't wait to celebrate with you.</p>
-      </div>
-    </div>
-
-    <p class="rsvp-or">Or call us directly at &nbsp;<a href="tel:+919037471600">+91 90374 71600</a></p>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer>
-  <svg class="footer-shell" width="36" height="36" viewBox="0 0 36 36" fill="none">
-    <path d="M18 4C10 4 4 10 4 18C4 26 10 32 18 32C26 32 32 26 32 18" stroke="var(--sea-bright)" stroke-width="2" stroke-linecap="round"/>
-    <path d="M18 4C18 4 23 9 23 15C23 21 18 24 13 22" stroke="var(--sea-bright)" stroke-width="1.5" stroke-linecap="round"/>
-    <circle cx="18" cy="18" r="3" fill="var(--sand-dark)" opacity="0.7"/>
-  </svg>
-  <p class="footer-names">Dr Amina Shana &amp; Jifaz Ahammed</p>
-  <p class="footer-date">8 &middot; 8 &middot; 2026 &nbsp;&middot;&nbsp; Wedding Reception</p>
-</footer>
-
 <script>
 // Particles
 const pc = document.getElementById('particles');
@@ -795,16 +610,6 @@ for(let i=0;i<18;i++){
   const s=Math.random()*8+4;
   p.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;bottom:${Math.random()*60+10}%;animation-duration:${4+Math.random()*6}s;animation-delay:${Math.random()*5}s;`;
   pc.appendChild(p);
-}
-
-// Bubbles for RSVP
-const bc=document.getElementById('bubbles');
-for(let i=0;i<12;i++){
-  const b=document.createElement('div');
-  b.className='bubble';
-  const s=Math.random()*40+15;
-  b.style.cssText=`width:${s}px;height:${s}px;left:${Math.random()*100}%;bottom:${Math.random()*30}%;animation-duration:${6+Math.random()*8}s;animation-delay:${Math.random()*6}s;`;
-  bc.appendChild(b);
 }
 
 // Countdown
@@ -824,41 +629,6 @@ updateCd();setInterval(updateCd,1000);
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// RSVP attend toggle
-let attendVal='';
-function selectAttend(v){
-  attendVal=v;
-  document.getElementById('btnYes').className='attend-btn'+(v==='yes'?' active-yes':'');
-  document.getElementById('btnNo').className='attend-btn'+(v==='no'?' active-no':'');
-}
-
-// RSVP submit — sends directly to ayshadana04@gmail.com via mailto
-function submitRSVP(){
-  const name=document.getElementById('guestName').value.trim();
-  const phone=document.getElementById('guestPhone').value.trim();
-  const count=document.getElementById('guestCount').value;
-  const guestMsg=document.getElementById('guestMsg').value.trim();
-  if(!name){alert('Please enter your name.');return;}
-  if(!attendVal){alert('Please let us know if you will be attending.');return;}
-
-  const subject=encodeURIComponent('RSVP: Dr Amina Shana & Jifaz Ahammed Wedding Reception');
-  const body=encodeURIComponent(
-    'Guest Name: ' + name + '\n' +
-    'Phone: ' + (phone||'Not provided') + '\n' +
-    'Number of Guests: ' + (count||'Not specified') + '\n' +
-    'Attending: ' + (attendVal==='yes'?'Yes – Joyfully attending':'No – Unable to attend') + '\n' +
-    'Message: ' + (guestMsg||'—')
-  );
-
-  window.location.href='mailto:ayshadana04@gmail.com?subject='+subject+'&body='+body;
-
-  const successText=attendVal==='yes'
-    ?`We can't wait to celebrate with you, ${name.split(' ')[0]}! See you on 8th August 🌊`
-    :`Thank you for letting us know, ${name.split(' ')[0]}. You'll be missed!`;
-  document.getElementById('rsvpForm').style.display='none';
-  const s=document.getElementById('rsvpSuccess');
-  s.style.display='block';
-  document.getElementById('successMsg').textContent=successText;
 }
 </script>
 </body>
